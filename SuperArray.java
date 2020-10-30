@@ -14,6 +14,7 @@ public class SuperArray {
   public boolean add(String element) {
     if (size <= data.length) {
       data[size] = element;
+      size++;
       return true;
     }
     else return false;
@@ -21,6 +22,12 @@ public class SuperArray {
 
   public String get(int index) {
     return data[index];
+  }
+
+  public String set(int index, String element) {
+    int replaced = data[index];
+    data[index] = element;
+    return replaced;
   }
 
 }
