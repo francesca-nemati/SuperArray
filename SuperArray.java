@@ -11,4 +11,8 @@ public class SuperArray {
     return size;
   }
 
+  public boolean add(String element) {
+
+  }
+
 }
