@@ -25,7 +25,7 @@ public class SuperArray {
   }
 
   public String set(int index, String element) {
-    int replaced = data[index];
+    String replaced = data[index];
     data[index] = element;
     return replaced;
   }
