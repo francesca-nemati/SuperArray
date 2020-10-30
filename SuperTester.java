@@ -20,5 +20,14 @@ public class SuperTester {
     System.out.println("Index 4: " + arr1.get(4));
     System.out.println("New size: " + arr1.size());
     System.out.println();
+
+    System.out.println("Index 0: " + arr1.get(0));
+    System.out.println("Index 1: " + arr1.get(1));
+    System.out.println("Index 2: " + arr1.get(2));
+    System.out.println("Index 3: " + arr1.get(3));
+    System.out.println("Replaced index 4: " + arr1.set(4, "John Cena"));
+    System.out.println("Changed index 4: " + arr1.get(4));
+    System.out.println("New size: " + arr1.size());
+    System.out.println();
   }
 }
