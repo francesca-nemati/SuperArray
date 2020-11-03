@@ -3,6 +3,7 @@ public class SuperTester {
     SuperArray arr1 = new SuperArray();
 
     System.out.println("Array 1 Initial size: " + arr1.size());
+    System.out.println("Empty?: " + arr1.isEmpty());
     System.out.println();
 
     arr1.add("Hello");
@@ -60,5 +61,16 @@ public class SuperTester {
     for (int i = 10; i < arr2.size(); i++) {
       System.out.println(arr2.get(i));
     }
+    System.out.println();
+    System.out.println("Arr1 Empty?: " + arr1.isEmpty());
+    arr1.clear();
+    System.out.println("Cleared. Empty?: " + arr1.isEmpty());
+    arr1.add("Hi");
+    arr1.add("again");
+    arr1.add(":)");
+    System.out.println("Array contents: " + arr1.toString());
+    System.out.println("Contains Hello: " + arr1.contains("Hello"));
+    System.out.println("Contains Hi: " + arr1.contains("Hi"));
+
   }
 }

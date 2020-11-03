@@ -59,8 +59,8 @@ public class SuperArray {
   public String toString() {
     String str = "[";
     for (int i = 0; i < size; i++) {
-      if (i = size-1) str = str + data[i] + "]";
-      str = str + data[i] + ", ";
+      if (i == size-1) str = str + data[i] + "]";
+      else str = str + data[i] + ", ";
     }
     return str;
   }
