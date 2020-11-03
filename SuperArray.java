@@ -49,4 +49,12 @@ public class SuperArray {
     else return false;
   }
 
+    public void clear() {
+      for (int i = 0; i < data.length; i++) {
+        data[i] = null;
+      }
+      size = 0;
+    }
+
+
 }
