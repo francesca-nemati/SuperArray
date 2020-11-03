@@ -61,6 +61,11 @@ public class SuperTester {
     for (int i = 10; i < arr2.size(); i++) {
       System.out.println(arr2.get(i));
     }
+
+    System.out.println(arr2.toString());
+    arr2.add(4, "break");
+    System.out.println(arr2.toString());
+
     System.out.println();
     System.out.println("Arr1 Empty?: " + arr1.isEmpty());
     arr1.clear();

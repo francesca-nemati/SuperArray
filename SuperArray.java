@@ -42,7 +42,7 @@ public class SuperArray {
   }
 
   private void resize() {
-    String[] largerArr = new String[data.length+10]; //increase by 10;
+    String[] largerArr = new String[data.length*2]; //increase by 10;
     for (int i = 0; i < data.length; i++) {
       largerArr[i] = data[i];
     }
@@ -77,6 +77,20 @@ public class SuperArray {
     return false;
   }
 
-  
+  public void add(int index, String element) {
+    if (size == data.length) {
+      resize();
+    }
+    if (data[index] == null) {
+      data[index] = element;
+    }
+    else if (data[index] != null) {
+      for (int i = size; i > index; i--) {
+        data[i] = data[i-1];
+      }
+      data[index] = element;
+    }
+    size = size + 1;
+  }
 
 }
