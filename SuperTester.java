@@ -65,8 +65,9 @@ public class SuperTester {
     System.out.println(arr2.toString());
     arr2.add(4, "break");
     System.out.println(arr2.toString());
-
+    System.out.println("New size: " + arr2.size());
     System.out.println();
+
     System.out.println("Arr1 Empty?: " + arr1.isEmpty());
     arr1.clear();
     System.out.println("Cleared. Empty?: " + arr1.isEmpty());
@@ -76,6 +77,15 @@ public class SuperTester {
     System.out.println("Array contents: " + arr1.toString());
     System.out.println("Contains Hello: " + arr1.contains("Hello"));
     System.out.println("Contains Hi: " + arr1.contains("Hi"));
+
+    arr1.add(3,"!");
+    System.out.println(arr1.toString());
+    System.out.println("New size: " + arr1.size());
+    System.out.println();
+
+    arr1.remove(2);
+    System.out.println(arr1.toString());
+    System.out.println("New size: " + arr1.size());
 
   }
 }
