@@ -87,5 +87,9 @@ public class SuperTester {
     System.out.println(arr1.toString());
     System.out.println("New size: " + arr1.size());
 
+    System.out.println();
+    System.out.println("Index of Hello: " + arr1.indexOf("Hello"));
+    System.out.println("Index of Hi: " + arr1.indexOf("Hi"));
+
   }
 }
