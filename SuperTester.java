@@ -91,5 +91,30 @@ public class SuperTester {
     System.out.println("Index of Hello: " + arr1.indexOf("Hello"));
     System.out.println("Index of Hi: " + arr1.indexOf("Hi"));
 
+    SuperArray arr3 = new SuperArray();
+    arr3.add("0");
+    arr3.add("1");
+    arr3.add("2");
+    arr3.add("3");
+    arr3.add("4");
+    arr3.add("0");
+    arr3.add("1");
+    arr3.add("2");
+    arr3.add("3");
+    arr3.add("4");
+    arr3.add("0");
+    arr3.add("1");
+    arr3.add("2");
+    arr3.add("3");
+    arr3.add("4");
+    arr3.add("0");
+    arr3.add("1");
+    arr3.add("2");
+    arr3.add("3");
+    arr3.add("4");
+    arr3.remove(19);
+    System.out.println(arr3.toString());
+
+
   }
 }
