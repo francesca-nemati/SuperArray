@@ -63,6 +63,7 @@ public class SuperArray {
 
   public String toString() {
     String str = "[";
+    if (size == 0) str = str + "]";
     for (int i = 0; i < size; i++) {
       if (i == size-1) str = str + data[i] + "]";
       else str = str + data[i] + ", ";
@@ -94,8 +95,7 @@ public class SuperArray {
   }
 
   public String remove(int index) {
-    String rem = "";
-    data[index] = rem;
+    String rem = data[index];
     data[index] = null;
     for (int i = index; i < size; i++) {
       data[i] = data[i+1];
