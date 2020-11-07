@@ -119,7 +119,11 @@ public class SuperArray {
   }
 
   public int lastIndexOf(String value) {
-    return value.length()-1;
+    int lastIndex = -1;
+    for (int i = 0; i < size; i++) {
+      if (data[i].equals(value)) lastIndex = i;
+    }
+    return lastIndex;
   }
 
   public boolean equals(SuperArray other) {
