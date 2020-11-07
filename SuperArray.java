@@ -118,4 +118,18 @@ public class SuperArray {
     return arr;
   }
 
+  public int lastIndexOf(String value) {
+    return value.length()-1;
+  }
+
+  public boolean equals(SuperArray other) {
+    int shortestArr = 0;
+    if (size < other.size()) shortestArr = size;
+    else shortestArr = other.size();
+    for (int i = 0; i < shortestArr; i++) {
+      if (!data[i].equals(other.get(i))) return false;
+    }
+    return true;
+  }
+
 }
