@@ -8,6 +8,9 @@ public class SuperArray {
   }
 
   public SuperArray(int initialCapacity) {
+    if (initialCapacity < 0) {
+      throw new IllegalArgumentException("Can't input a negative initial capacity!");
+    }
     data = new String[initialCapacity];
     size = 0;
   }
@@ -32,17 +35,23 @@ public class SuperArray {
   }
 
   public String get(int index) {
+    if (index < 0 || index >= size()) {
+      throw new IndexOutOfBoundsException("Index must be in range!");
+    }
     return data[index];
   }
 
   public String set(int index, String element) {
+    if (index < 0 || index >= size()) {
+      throw new IndexOutOfBoundsException("Index must be in range!");
+    }
     String replaced = data[index];
     data[index] = element;
     return replaced;
   }
 
   private void resize() {
-    String[] largerArr = new String[data.length*2]; //increase by 10;
+    String[] largerArr = new String[(data.length*2) + 1]; //increase by x2 + 1;
     for (int i = 0; i < data.length; i++) {
       largerArr[i] = data[i];
     }
@@ -79,6 +88,9 @@ public class SuperArray {
   }
 
   public void add(int index, String element) {
+    if (index < 0 || index > size()) {
+      throw new IndexOutOfBoundsException("Index must be in range!")
+    }
     if (size == data.length) {
       resize();
     }
@@ -95,6 +107,9 @@ public class SuperArray {
   }
 
   public String remove(int index) {
+    if (index < 0 || index >= size()) {
+      throw new IndexOutOfBoundsException("Index must be in range!")
+    }
     String rem = data[index];
     for (int i = index; i < size -1; i++) {
       data[i] = data[i+1];
