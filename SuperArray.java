@@ -89,7 +89,7 @@ public class SuperArray {
 
   public void add(int index, String element) {
     if (index < 0 || index > size()) {
-      throw new IndexOutOfBoundsException("Index must be in range!")
+      throw new IndexOutOfBoundsException("Index must be in range!");
     }
     if (size == data.length) {
       resize();
@@ -108,7 +108,7 @@ public class SuperArray {
 
   public String remove(int index) {
     if (index < 0 || index >= size()) {
-      throw new IndexOutOfBoundsException("Index must be in range!")
+      throw new IndexOutOfBoundsException("Index must be in range!");
     }
     String rem = data[index];
     for (int i = index; i < size -1; i++) {

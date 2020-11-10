@@ -114,7 +114,79 @@ public class SuperTester {
     arr3.add("4");
     arr3.remove(19);
     System.out.println(arr3.toString());
+    System.out.println();
 
+    try {
+      SuperArray arr4 = new SuperArray(-1);
+    }
+    catch(IllegalArgumentException e) {
+      System.out.println("Failed to initialize arr4");
+    //  e.printStackTrace();
+    }
+
+    try {
+      arr3.get(20);
+    }
+    catch(IndexOutOfBoundsException e) {
+      System.out.println("Invalid index for get");
+    //  e.printStackTrace();
+    }
+
+    try {
+      arr3.get(-1);
+    }
+    catch(IndexOutOfBoundsException e) {
+      System.out.println("Invalid index for get");
+      //e.printStackTrace();
+    }
+
+    try {
+      arr3.set(20, "hi");
+    }
+    catch(IndexOutOfBoundsException e) {
+      System.out.println("Invalid index for set");
+      //e.printStackTrace();
+    }
+
+    try {
+      arr3.set(-1, "hi");
+    }
+    catch(IndexOutOfBoundsException e) {
+      System.out.println("Invalid index for set");
+      //e.printStackTrace();
+    }
+
+    try {
+      arr3.add(19, "hi");
+    }
+    catch(IndexOutOfBoundsException e) {
+      System.out.println("Invalid index for add");
+      //e.printStackTrace();
+    }
+
+    try {
+      arr3.add(-1, "hi");
+    }
+    catch(IndexOutOfBoundsException e) {
+      System.out.println("Invalid index for add");
+      //e.printStackTrace();
+    }
+
+    try {
+      arr3.remove(20);
+    }
+    catch(IndexOutOfBoundsException e) {
+      System.out.println("Invalid index for remove");
+      //e.printStackTrace();
+    }
+
+    try {
+      arr3.remove(-1);
+    }
+    catch(IndexOutOfBoundsException e) {
+      System.out.println("Invalid index for remove");
+      //e.printStackTrace();
+    }
 
   }
 }
